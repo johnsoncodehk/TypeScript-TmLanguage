@@ -15,6 +15,7 @@ variables:
   propertyIdentifier: '\#?{{identifier}}'
   constantPropertyIdentifier: '\#?{{constantIdentifier}}'
   quotedStrings: (\'([^\'\\]|\\.)*\')|(\"([^\"\\]|\\.)*\")|(\`([^\`\\]|\\.)*\`)
+  stringQuotes: \'|\"|\`
   nonIdentifierPropertyName: '{{quotedStrings}}|(\[([^\[\]]|\[[^\[\]]*\])+\])'
   label: ({{identifier}})\s*(:)
   hexNumber: \b(?<!\$)0(?:x|X)[0-9a-fA-F][0-9a-fA-F_]*(n)?\b(?!\$)
@@ -59,7 +60,7 @@ variables:
   lookBehindTypeof: '^typeof|{{nonPropertyLookBehind}}typeof'
   lookBehindCase: '^case|{{nonPropertyLookBehind}}case'
   lookBehindImport: '^import|{{nonPropertyLookBehind}}import'
-  lookAheadEndOfType: '[;),}\]:?\-\+\>]|\|\||\&\&|\!\=\=|$'
+  lookAheadEndOfType: '[;),}\]:?\-\+\>{{stringQuotes}}]|\|\||\&\&|\!\=\=|$'
   matchingParenthesis: (\(([^\(\)]|(\(([^\(\)]|\([^\(\)]*\))*\)))*\))
   matchingBraces: (\{([^\{\}]|(\{([^\{\}]|\{[^\{\}]*\})*\}))*\})
   matchingBrackets: (\[([^\[\]]|(\[([^\[\]]|\[[^\[\]]*\])*\]))*\])
@@ -1802,7 +1803,7 @@ repository:
     begin: '{{startOfIdentifier}}typeof{{endOfIdentifier}}'
     beginCaptures:
       '0': { name: keyword.operator.expression.typeof.ts }
-    end: (?=[,);}\]=>:&|{\?]|(extends\s+)|$|{{endOfStatement}})
+    end: (?=[,);}\]=>:&|{\?{{stringQuotes}}]|(extends\s+)|$|{{endOfStatement}})
     patterns:
     - include: '#type-arguments'
     - include: '#expression'

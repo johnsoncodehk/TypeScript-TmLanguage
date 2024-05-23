@@ -4747,7 +4747,7 @@
               </dict>
             </dict>
             <key>end</key>
-            <string>(?=[;),}\]:?\-\+\&gt;]|\|\||\&amp;\&amp;|\!\=\=|$|^|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(as|satisifies)\s+))</string>
+            <string>(?=[;),}\]:?\-\+\&gt;\'|\"|\`]|\|\||\&amp;\&amp;|\!\=\=|$|^|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(as|satisifies)\s+))</string>
             <key>patterns</key>
             <array>
               <dict>
@@ -5131,7 +5131,7 @@
           </dict>
         </dict>
         <key>end</key>
-        <string>(?&lt;=\))|(?=[;),}\]:?\-\+\&gt;]|\|\||\&amp;\&amp;|\!\=\=|$|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))new(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.)))|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))function((\s+[_$[:alpha:]][_$[:alnum:]]*)|(\s*[\(]))))</string>
+        <string>(?&lt;=\))|(?=[;),}\]:?\-\+\&gt;\'|\"|\`]|\|\||\&amp;\&amp;|\!\=\=|$|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))new(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.)))|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))function((\s+[_$[:alpha:]][_$[:alnum:]]*)|(\s*[\(]))))</string>
         <key>patterns</key>
         <array>
           <dict>
@@ -5153,7 +5153,7 @@
           </dict>
         </dict>
         <key>end</key>
-        <string>(?&lt;=\))|(?=[;),}\]:?\-\+\&gt;]|\|\||\&amp;\&amp;|\!\=\=|$|(===|!==|==|!=)|(([\&amp;\~\^\|]\s*)?[_$[:alpha:]][_$[:alnum:]]*\s+instanceof(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.)))|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))function((\s+[_$[:alpha:]][_$[:alnum:]]*)|(\s*[\(]))))</string>
+        <string>(?&lt;=\))|(?=[;),}\]:?\-\+\&gt;\'|\"|\`]|\|\||\&amp;\&amp;|\!\=\=|$|(===|!==|==|!=)|(([\&amp;\~\^\|]\s*)?[_$[:alpha:]][_$[:alnum:]]*\s+instanceof(?![_$[:alnum:]])(?:(?=\.\.\.)|(?!\.)))|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))function((\s+[_$[:alpha:]][_$[:alnum:]]*)|(\s*[\(]))))</string>
         <key>patterns</key>
         <array>
           <dict>
@@ -5698,7 +5698,7 @@
               </dict>
             </dict>
             <key>end</key>
-            <string>(?=^|[;),}\]:?\-\+\&gt;]|\|\||\&amp;\&amp;|\!\=\=|$|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(as|satisfies)\s+)|(\s+\&lt;))</string>
+            <string>(?=^|[;),}\]:?\-\+\&gt;\'|\"|\`]|\|\||\&amp;\&amp;|\!\=\=|$|((?&lt;![_$[:alnum:]])(?:(?&lt;=\.\.\.)|(?&lt;!\.))(as|satisfies)\s+)|(\s+\&lt;))</string>
             <key>patterns</key>
             <array>
               <dict>
@@ -5859,7 +5859,7 @@
           </dict>
         </dict>
         <key>end</key>
-        <string>(?=[,);}\]=&gt;:&amp;|{\?]|(extends\s+)|$|;|^\s*$|(?:^\s*(?:abstract|async|(?:\bawait\s+(?:\busing(?=\s+(?!in\b|of\b(?!\s*(?:of\b|=)))[_$[:alpha:]])\b)\b)|break|case|catch|class|const|continue|declare|do|else|enum|export|finally|function|for|goto|if|import|interface|let|module|namespace|switch|return|throw|try|type|(?:\busing(?=\s+(?!in\b|of\b(?!\s*(?:of\b|=)))[_$[:alpha:]])\b)|var|while)\b))</string>
+        <string>(?=[,);}\]=&gt;:&amp;|{\?\'|\"|\`]|(extends\s+)|$|;|^\s*$|(?:^\s*(?:abstract|async|(?:\bawait\s+(?:\busing(?=\s+(?!in\b|of\b(?!\s*(?:of\b|=)))[_$[:alpha:]])\b)\b)|break|case|catch|class|const|continue|declare|do|else|enum|export|finally|function|for|goto|if|import|interface|let|module|namespace|switch|return|throw|try|type|(?:\busing(?=\s+(?!in\b|of\b(?!\s*(?:of\b|=)))[_$[:alpha:]])\b)|var|while)\b))</string>
         <key>patterns</key>
         <array>
           <dict>
